@@ -113,6 +113,7 @@ group by proj.sigla
 
 -- o(s) projeto(s) que não possui(em) um administrador de dados.
 
+
 -- o(s) projeto(s) com funcionários que entraram na empresa depois do projeto ter começado.
 
 SELECT * from func;
