@@ -101,6 +101,7 @@ GROUP BY proj.sigla
 ORDER BY COUNT(func_proj.codfunc) DESC;
 
 -- o(s) projeto(s) com mais analistas de sistemas do que programadores.
+-- TODO arrumar
 SELECT proj.sigla from proj 
 join func_proj ON (proj.cod = func_proj.codproj)
 join func on (func_proj.codfunc=func.cod)
@@ -116,10 +117,11 @@ SELECT * FROM proj;
 SELECT * FROM func_proj;
 SELECT * FROM cargo;
 
+-- Outras queries
 -- segundo maior salario
 SELECT  max(salario) from func where func.salario NOT IN (SELECT MAX(salario) from func);
 -- empregado com o segundo maior salario
 SELECT * FROM func WHERE salario=(SELECT  max(salario) from func where func.salario NOT IN (SELECT MAX(salario) from func));
 
--- First name of the employees
+-- Primeiro nome dos empregados
 select substring(nome, 1, charindex(' ',nome)) from func

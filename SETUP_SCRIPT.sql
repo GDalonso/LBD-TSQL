@@ -109,9 +109,11 @@ INSERT INTO func_proj VALUES(6, 8, '01/13/2004');
 GO
 
 
+-- Updates
 UPDATE cargo SET nome='Coord de Projeto' WHERE cod=3
 UPDATE func SET dataadm = '2004-10-16' where cod=2;
 GO
 
+-- Deletes
 DELETE FROM func_proj WHERE codfunc=8 AND codproj=6
 GO
